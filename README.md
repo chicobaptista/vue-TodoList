@@ -20,8 +20,8 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ## Roadmap
 
- - [ ] Tutorial https://medium.com/@kessiacastro/vue-js-tutorial-iniciando-com-componentes-4445b3eb0ffe
- - [ ] MVP v 1.0
+ - [x] Tutorial https://medium.com/@kessiacastro/vue-js-tutorial-iniciando-com-componentes-4445b3eb0ffe
+ - [x] MVP v 1.0
  - [ ] Adicionar prazo para tarefas
  - [ ] Ordenar tarefas por urgencia
  - [ ] Filtrar tarefas por mês/semana
