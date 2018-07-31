@@ -6,6 +6,11 @@
           <p class="control is-expanded">
              <input class="input is-primary has-text-centered" type="text" placeholder="Nova tarefa..." v-model="tarefa">
           </p>
+        </div>
+        <div class="field is-grouped">
+          <p class="control is-expanded">
+            <input class="input is-primary has-text-centered" type="date" placeholder="Prazo" v-model="prazo">
+          </p>
           <p class="control">
             <a class="button is-success add-button" @click="enviarTarefa">
               <span class="icon is-small">
@@ -14,9 +19,9 @@
             </a>
           </p>
         </div>
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -24,16 +29,18 @@ export default {
   name: "novo-todo",
   data() {
     return {
-      tarefa: ""
+      tarefa: "",
+      prazo: ""
     };
   },
 
   methods: {
     enviarTarefa() {
       if (this.tarefa != "") {
-        this.$emit("novaTarefa", this.tarefa);
+        this.$emit("novaTarefa", this.tarefa, this.prazo);
       }
       this.tarefa = "";
+      this.prazo = "";
     }
   }
 };

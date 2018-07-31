@@ -69,7 +69,7 @@ export default {
 
   methods: {
     adicionarTarefa(tarefa) {
-      let nova_tarefa = { description: tarefa, checked: false };
+      let nova_tarefa = { description: tarefa, deadline: prazo, checked: false };
       this.tarefas.push(nova_tarefa);
     },
     checkTarefa(index) {
