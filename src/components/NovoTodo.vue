@@ -1,15 +1,19 @@
 <template>
   <div class="row">
-    <div class="columns">
-      <div class="column  is-half is-offset-one-quarter">
+    <div class="collumns">
+      <div class="collumn is-half is-offset-one-quarter">
         <div class="field is-grouped">
           <p class="control is-expanded">
-             <input class="input is-primary has-text-centered" type="text" placeholder="Nova tarefa..." v-model="tarefa">
+            <input 
+              v-model="tarefa" 
+              class="input is-primary has-text-centered" 
+              type="text" 
+              placeholder="Nova Tarefa">
           </p>
           <p class="control">
             <a class="button is-success add-button" @click="enviarTarefa">
               <span class="icon is-small">
-                <i class="fa fa-plus"></i>
+                <i class="fa fa-plus"/>
               </span>
             </a>
           </p>
@@ -21,20 +25,21 @@
 
 <script>
 export default {
-  name: "novo-todo",
+  name: "NovoTodo",
   data() {
     return {
       tarefa: ""
     };
   },
-
   methods: {
-    enviarTarefa() {
-      if (this.tarefa != "") {
-        this.$emit("novaTarefa", this.tarefa);
+      enviarTarefa() {
+          // emita evento contendo a string de nova tarefa
+          if (this.tarefa != '') {
+              this.$emit('novaTarefa', this.tarefa)
+          }
+          // limpa campo de tarefa
+          this.tarefa = '';
       }
-      this.tarefa = "";
-    }
   }
 };
 </script>
@@ -49,6 +54,7 @@ export default {
   border-bottom-width: 2px;
   box-shadow: none;
 }
+
 .input.is-primary:focus {
   box-shadow: none;
 }
@@ -56,3 +62,4 @@ export default {
   border-radius: 50%;
 }
 </style>
+

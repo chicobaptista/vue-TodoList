@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     <section class="hero is-primary is-bold is-fullheight">
+    <section class="hero is-primary is-bold is-fullheight">
       <!-- Hero head: will stick at the top -->
       <div class="hero-head">
         <nav class="navbar">
@@ -20,7 +20,7 @@
           <div class="row">
             <div class="columns">
               <div class="column is-half is-offset-one-quarter">
-                <todo-card></todo-card>
+                <todo-card/>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
 <script>
 import TodoCard from './components/TodoCard'
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     TodoCard
   },

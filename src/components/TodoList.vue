@@ -1,19 +1,26 @@
 <template>
-<div class="row">
+  <div class="row">
     <div class="columns">
       <div class="column">
-        <div class="field is-grouped" v-for="(tarefa, index) in tarefas" :key="tarefa.index">
+        <div 
+          v-for="(tarefa, index) in tarefas" 
+          class="field is-grouped">
           <p class="control">
-            <a class="button is-rounded is-small check-button" @click="check(index)">
-              <span class="icon is-small">
-              </span>
+            <a 
+              class="button is-rounded is-small check-button"
+              @click="check(index)">
+              <span class="icon is-small"/>
             </a>
           </p>
-          <p class="control is-expanded" :class="{'checked': tarefa.checked}">{{tarefa.description}}</p>
+          <p 
+            :class="{'checked': tarefa.checked}"
+            class="control is-expanded">{{ tarefa.description }}</p>
           <p class="control">
-            <a class="button is-danger is-small" @click="remover(index)">
+            <a 
+              class="button is-danger is-small"
+              @click="remover(index)">
               <span class="icon is-small">
-                <i class="fa fa-trash"></i>
+                <i class="fa fa-trash"/>
               </span>
             </a>
           </p>
@@ -25,20 +32,26 @@
 
 <script>
 export default {
-  name: "todo-list",
-  props: ["tarefas"],
-  data() {
-    return {};
+  name: 'TodoList',
+  props: {
+      tarefas: {
+          default: function () { return [] },
+          type: Array,
+          }
+  },
+  data () {
+    return {
+    }
   },
   methods: {
-    check(index) {
-      this.$emit("check", index);
-    },
-    remover(index) {
-      this.$emit("remover", index);
-    }
+      check(index) {
+          this.$emit('check', index)
+      },
+      remover(index) {
+          this.$emit('remover', index)
+      }
   }
-};
+}
 </script>
 
 <style scoped>
