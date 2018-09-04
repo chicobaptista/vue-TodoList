@@ -31,3 +31,10 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
  - [ ] Adicionar tags
  - [ ] Ordenar por importância
  - [ ] Filtrar por categoria
+ 
+ 
+ ## References
+ 
+ - https://vuejs-brasil.com.br/exporte-seu-projeto-vue-para-o-github-pages/
+ - https://medium.com/@kessiacastro/vue-js-tutorial-iniciando-com-componentes-4445b3eb0ffe
+ - https://vuejs.org/v2/guide/
